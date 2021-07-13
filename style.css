@@ -1,0 +1,50 @@
+:root {
+  --bgcolor: #274248;
+  --fgcolor: #DAEDF1;
+}
+
+body {
+  background-color: var(--bgcolor);
+}
+
+#animation-start {
+  position: absolute;
+  bottom: 50vh;
+  left: 0;
+}
+
+div.flake {
+  background-color: var(--fgcolor);
+  cursor: pointer;
+  color: var(--fgcolor);
+  height: 20px;
+  left: 0px;
+  /* overflow: hidden; */
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  transition: top 4s, left 4s, transform 4s, color 4s;
+  width: 20px;
+}
+
+div.flake span {
+  color: var(--fgcolor);
+  left: 20px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+@keyframes flake-spin {
+  0% { transform: rotate3d(1, 1, 1, 0deg);}
+  100% { transform: rotate3d(1, 1, 1, 3600deg);}
+}
+
+#click-me {
+  color: var(--fgcolor);
+  cursor: pointer;
+  left: 20px;
+  position: absolute;
+  transition: color 4s cubic-bezier(0,0,0.7,1), left 4s cubic-bezier(0,0,0.7,1);
+  top: 50vh;
+}
